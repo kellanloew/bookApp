@@ -1,0 +1,45 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.alert{
+    display: none;
+  }
+  
+  .row-padding{
+    padding-left: 10px;
+  }
+  
+  h1{
+    text-align: center;
+  }
+  
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #eeeeee;
+  }
+  
+  #home-body {
+    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('/img/b.jpg');
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }

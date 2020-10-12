@@ -19,8 +19,8 @@ class AjaxController extends Controller
         //loop through all books in reading list, updating position of those that should be
         foreach($books as $book){
 
-            // set the extremes for the search range, and amount to change position of existing books by.
-            // Depends on if the new positon of moved book is greater or less than original position
+            // set the extremes for the range of books whose order is to be changed, and set amount to change their position by.
+            // The calculations depend on whether the new positon of moved book is greater or less than original position
             if($oldPosition > $newPosition){
                 $topThresh = $oldPosition;
                 $bottomThresh = $newPosition;

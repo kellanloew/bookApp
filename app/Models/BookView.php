@@ -12,4 +12,5 @@ class BookView extends Model
     public $authors;
     public $ISBN;
     public $pages;
+    public $thumbnail;
 }

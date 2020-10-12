@@ -1,17 +1,20 @@
 @extends('layouts.mainlayout')
 
 <head>
-    <title>Book Details</title>
+    <title>Reading List - Book Details</title>
 </head>
 @section('content')
 
 <div class="container-fluid">
     <h1>Book Details</h1>
     <div class='row'>
-        <div class='col-lg-3'>
+        <div class='col-lg-2'>
             <p>Title: {{$book->title}}</p>
         </div>
         <div class='col-lg-2'>
+            <img src="<?php echo $book->thumbnail ?>" alt="">
+        </div>
+        <div class='col-lg-1'>
             <p>Author: {{$book->author}}</p>
         </div>
         <div class='col-lg-1'>
