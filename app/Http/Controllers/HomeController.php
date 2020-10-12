@@ -18,7 +18,7 @@ class HomeController extends BaseController{
         return view("home", ["books" => $currentBooks]);
     }
 
-    //deletes a book in the current list of user's books
+    //deletes a book in the current user's list
     public function delete(Request $request){
         $ISBN = $request->input('ISBN');
         $currentBook = new Book();

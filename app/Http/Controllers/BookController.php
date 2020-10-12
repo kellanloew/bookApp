@@ -69,15 +69,15 @@ class BookController extends BaseController
      */
     public function AddBook(Request $request){
         try{
-            //check if the bok already exists
-            $existing = Book::where('ISBN', '=', $request->input('chosenISBN'))->first();
-            if($existing != null){
+            $book = new Book();
+            $book->ISBN = $request->input('chosenISBN');
+
+            //check if the book already exists
+            if($book->doesExistInDb()){
                 return response()->json(['success'=>100, "message" => "That book already exists."]);
             }
             //if not, add this book to the DB
             else{
-                $book = new Book();
-                $book->ISBN = $request->input('chosenISBN');
                 $book->author = $request->input('author');
                 $book->title = $request->input('title');
                 $book->position = Book::max('position') + 1;
@@ -86,7 +86,7 @@ class BookController extends BaseController
             }
         }
         catch(\Exception $e){
-            return response()->json(['success'=>500, "message" => $e->getMessage()]);
+            return response()->json(['success'=>500]);
         }
     }
 
