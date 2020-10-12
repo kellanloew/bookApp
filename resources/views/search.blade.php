@@ -23,7 +23,7 @@
         <div class='alert alert-warning'>That book already exists.</div>
         <div class='alert alert-danger'>Something went wrong while trying to add that book.</div>
     </div>
-    <div class="row row-padding">
+    <div class="row pl-2">
         @if(isset($foundBooks) && count($foundBooks) > 0)
         <p>Showing {{ count($foundBooks) }} results for "{{ $term }}"</p>
         <table>

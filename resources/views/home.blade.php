@@ -17,7 +17,7 @@
         <div class="col-lg-12" id='book-list'>
         @if(isset($books))
             @foreach($books as $book)
-                <div class='row row-padding' style='border: 1px solid;' id='<?php echo $book->position ?>' ISBN='<?php echo $book->ISBN ?>'>
+                <div class='row pl-2' style='border: 1px solid;' id='<?php echo $book->position ?>' ISBN='<?php echo $book->ISBN ?>'>
                     <div>
                         <form action="" method='POST'>
                             {{ csrf_field() }}
@@ -36,11 +36,11 @@
         @endif
         </div>
     </div>
-    <div class='row row-padding'>
+    <div class='row pl-2 py-2'>
         @if(count($books) > 0)
-        <button class='btn btn-sm btn-info' id="sort-title">Sort by title</button>
+        <button class='btn btn-info' id="sort-title">Sort by title</button>
         @endif
-        <a class='btn btn-sm btn-dark' href="/search" target="_blank">Search for a new book to add</a>
+        <a class='btn btn-dark' href="/search" target="_blank">Search for a new book to add</a>
     </div>
 </div>
 </body>
